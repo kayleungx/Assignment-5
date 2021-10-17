@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% block header %}
+   <!-- Header-->
+        <header class="bg-primary bg-gradient text-white">
+            <div class="container px-4 text-center">
+                <h1 class="fw-bolder">Welcome to Scrolling Nav</h1>
+                <p class="lead">A functional Bootstrap 5 boilerplate for one page scrolling websites</p>
+                <a class="btn btn-lg btn-light" href="#about">Start scrolling!</a>
+            </div>
+        </header>
+{% endblock %}
+{% block content1 %}
+   <!-- About section-->
+        <section id="about">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>About this page</h2>
+                        <p class="lead">This is a great place to get to know Peng Chau</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+{% endblock %}
+
+    {% block content2 %}
+<!-- Services section-->
+        <section class="bg-light" id="services">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>Information</h2>
+                    </div>
+                     <div class="row">
+                         <p class="col">
+                             <b>Spot</b>
+                          </p>
+                         <p class="col">
+                            <b>Type</b>
+                        </p>
+                        <p class="col">
+                            <b>Distance</b>        
+                        </p>
+                     </div>
+                    
+    {% for row in  entries  %}
+                     <div class="row">
+                        <p class="col">
+                                 {{ row["Spot"] }}
+                        </p>
+                        <p class="col">
+                                 {{ row["Type"] }}
+                        </p>
+                    <p class="col">
+                                 {{ row["Distance"] }}
+                        </p>
+                     </div>
+
+    {% endfor %}
+      </div>
+   </div>
+</section>
+ 
+{% endblock %}
+{% block content3 %}
+       <!-- Contact section-->
+        <section id="contact">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>Contact us</h2>
+                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+{% endblock %}
